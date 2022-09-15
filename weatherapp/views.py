@@ -38,12 +38,11 @@ def index(request):
         response = requests.get(url)
         content = response.json()
         data ={
-            "city" : content['name'],
+            "city" : city, # this line is purely to access id. We didn't use content['id'] since we dont want the api data id but rather db item id
             "temp" : content["main"]["temp"],
             "icon" : content["weather"][0]["icon"],
             "desc" : content["weather"][0]["description"]
         }
-
         city_data.append(data)
 
 
@@ -52,6 +51,13 @@ def index(request):
     }
 
     return render(request, 'weatherapp/index.html', context)
+
+
+def delete_city(request, id):
+    city = get_object_or_404(City, id=id) # get_object_or_404 calls a simple get() only difference is that it raises Http404 instead of DoesNotExist
+    city.delete()
+    messages.warning(request, "City deleted")
+    return redirect("home")
 
 
 # #! content
