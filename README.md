@@ -27,7 +27,7 @@
 
 This is a weather app where API requests were made visual using Django. API service used in this is project is from [openweathermap](https://openweathermap.org/)
 
-![screenshot](./django-weather-app.mp4)
+![screenshot](./django-weather-app.gif)
 
 
 <h2 id="stack">Stack & Tools</h2>
@@ -93,6 +93,7 @@ $ git clone https://github.com/MSKose/django-weather-app.git
 
 # Add .env file
     add your SECRET_KEY and API_KEY
+    
 # Run the app
     $ python manage.py runserver
 
