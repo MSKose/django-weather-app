@@ -25,9 +25,13 @@
 
 ## Overview
 
-This is a weather app where API requests were made visual using Django. API service used in this is project is from [openweathermap](https://openweathermap.org/)
+This is a weather app where API requests were made visual using Django. API service used in this project is from [openweathermap](https://openweathermap.org/)
 
-![screenshot](./django-weather-app.gif)
+<!-- ![screenshot](./django-weather-app.gif) -->
+
+<p align="center">
+  <img src="./django-weather-app.gif">
+</p>
 
 
 <h2 id="stack">Stack & Tools</h2>
